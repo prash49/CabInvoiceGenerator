@@ -44,7 +44,7 @@ public class InvoiceServiceTest {
         InvoiceService invoiceService = new InvoiceService();
         InvoiceSummary invoiceSummary = invoiceService.calculateFare(rides);
         InvoiceSummary expectedInvoices = new InvoiceSummary(2, 30.0);
-        Assert.assertEquals(invoiceSummary, expectedInvoices);
+        Assert.assertEquals(expectedInvoices.getInvoiceSummary(), invoiceSummary.getInvoiceSummary());
     }
 
 }

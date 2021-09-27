@@ -4,15 +4,25 @@ import java.util.Objects;
 
 public class InvoiceSummary {
 
-    private final int numberOfRides;
-    private final double totalFare;
-    private final double avgFare;
+
+    int numberOfRides;
+    double totalFare;
+    double avgFare;
+
+    public InvoiceSummary() {
+
+    }
 
     public InvoiceSummary(int numberOfRides, double totalFare) {
         this.numberOfRides = numberOfRides;
         this.totalFare = totalFare;
-        this.avgFare = this.totalFare / this.numberOfRides;
     }
+
+    public InvoiceSummary getInvoiceSummary() {
+        this.avgFare = this.totalFare / this.numberOfRides;
+        return this;
+    }
+
     // to compare objects we should have hashcode method else they
     //create a two different instances so creating equals() and hashcode()
     @Override
